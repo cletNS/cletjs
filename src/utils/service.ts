@@ -19,17 +19,28 @@ const cletCoreContract = new ethers.Contract(
   skaleProvider,
 )
 
-export function resolve(cletName: string) {
+export async function resolve(cletName: string) {
   try {
-    return cletCoreContract.resolve(cletName)
-  } catch {}
+    const resp = await cletCoreContract.resolve(cletName)
+    if (resp[0][0] == '') {
+      throw new Error('Invalid input')
+    }
+    return resp
+  } catch (ex) {
+    throw ex
+  }
 }
 
-export function reverse(address: string) {
+export async function reverse(address: string) {
   try {
-    const cletName = cletCoreContract.reverseLookup(address)
+    const cletName = await cletCoreContract.reverseLookup(address)
+    if (cletName == '') {
+      throw new Error('No matching results found')
+    }
     return cletName
-  } catch {}
+  } catch (ex) {
+    throw ex
+  }
 }
 
 export async function nameExists(cletName: string) {
@@ -42,6 +53,8 @@ export async function nameExists(cletName: string) {
         exists = false
       }
     }
-  } catch {}
+  } catch (ex) {
+    throw ex
+  }
   return exists
 }
