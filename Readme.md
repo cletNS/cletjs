@@ -5,8 +5,6 @@
 [![NPM Version][npm-image]][npm-url]
 [![Downloads Stats][npm-downloads]][npm-url]
 
-![](header.png)
-
 ## Installation
 
 npm:
@@ -49,6 +47,8 @@ reverseResolve('0xcb488089fA2168247BB6022f04E310d997608597')
 
 - 1.0.0
   - Resolve and reverse Clet names
+
+## [Additional Docs](https://docs.clet.domains)
 
 <!-- Markdown link & img dfn's -->
 
