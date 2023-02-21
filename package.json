@@ -1,8 +1,8 @@
 {
-  "name": "clet",
+  "name": "clet-js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/cletNS/clet.js.git"
+    "url": "git://github.com/cletNS/cletjs.git"
   },
   "version": "1.0.0",
   "description": "This package resolves Clet names",
