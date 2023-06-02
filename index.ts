@@ -1,3 +1,3 @@
-import { clet } from "./src/utils/index";
+import { resolve, reverse, nameExists } from './src/service';
 
-module.exports = clet
+export const clet = { exists: nameExists, resolve, reverse };

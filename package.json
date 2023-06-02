@@ -6,7 +6,7 @@
   },
   "version": "1.0.1",
   "description": "This package resolves Clet names",
-  "main": "build/index.js",
+  "main": "./index.ts",
   "scripts": {
     "build": "tsc",
     "dev": "ts-node-dev --respawn index.ts",
